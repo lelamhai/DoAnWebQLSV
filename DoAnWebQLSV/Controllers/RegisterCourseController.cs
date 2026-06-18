@@ -6,7 +6,7 @@ namespace DoAnWebQLSV.Controllers
 {
     public class RegisterCourseController : Controller
     {
-        public IActionResult index()
+        public IActionResult Index()
         {
             return View();
         }

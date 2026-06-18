@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Giangvien\" />
+    <Folder Include="Views\Nhanvien\" />
     <Folder Include="Views\RegisterCourse\" />
+    <Folder Include="wwwroot\assets\imgs\" />
   </ItemGroup>
 
 </Project>
