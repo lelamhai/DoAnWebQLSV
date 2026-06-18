@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj": {}
+    "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj",
         "projectName": "DoAnWebQLSV",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\DoAnWebQLSV.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\DoAnWebQLSV\\DoAnWebQLSV\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
