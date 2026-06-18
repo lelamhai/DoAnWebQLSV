@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Giangvien\" />
-    <Folder Include="Views\Nhanvien\" />
+    <Compile Remove="Views\Giangvien\**" />
+    <Compile Remove="Views\Nhanvien\**" />
+    <Content Remove="Views\Giangvien\**" />
+    <Content Remove="Views\Nhanvien\**" />
+    <EmbeddedResource Remove="Views\Giangvien\**" />
+    <EmbeddedResource Remove="Views\Nhanvien\**" />
+    <None Remove="Views\Giangvien\**" />
+    <None Remove="Views\Nhanvien\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Views\RegisterCourse\" />
     <Folder Include="wwwroot\assets\imgs\" />
   </ItemGroup>

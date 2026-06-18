@@ -118,7 +118,7 @@ namespace DoAnWebQLSV.Controllers
                 HttpContext.Session.SetString("Username", username);
                 HttpContext.Session.SetString("LoginMessage", message ?? "Đăng nhập thành công.");
 
-                return RedirectToAction("index", "RegisterCourse");
+                return RedirectToAction("index", "Classroom");
             }
 
             ViewBag.Error = message ?? "Đăng nhập thất bại. Vui lòng kiểm tra lại tài khoản hoặc mật khẩu.";

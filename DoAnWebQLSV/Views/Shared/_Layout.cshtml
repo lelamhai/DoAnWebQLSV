@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/assets/css/template.css" />
     <link rel="stylesheet" href="~/assets/css/content.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker3.min.css">
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <div class="app-layout">
@@ -99,6 +100,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
     <script src="~/assets/js/content.js"></script>
     <script src="~/assets/js/template.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
