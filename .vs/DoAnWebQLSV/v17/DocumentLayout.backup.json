@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\classroom\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\classroom\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\controllers\\classroomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\controllers\\classroomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\models\\classroomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\models\\classroomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,20 +27,8 @@
       "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\controllers\\registercoursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\controllers\\classroomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\controllers\\classroomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\classroom\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\classroom\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,32 +51,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ClassroomViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Models\\ClassroomViewModel.cs",
+              "RelativeDocumentMoniker": "DoAnWebQLSV\\Models\\ClassroomViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Models\\ClassroomViewModel.cs",
+              "RelativeToolTip": "DoAnWebQLSV\\Models\\ClassroomViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T14:07:10.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ClassroomController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Controllers\\ClassroomController.cs",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Controllers\\ClassroomController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Controllers\\ClassroomController.cs",
               "RelativeToolTip": "DoAnWebQLSV\\Controllers\\ClassroomController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwBkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-18T15:21:58.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "index.cshtml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Classroom\\index.cshtml",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\Classroom\\index.cshtml",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Classroom\\index.cshtml",
               "RelativeToolTip": "DoAnWebQLSV\\Views\\Classroom\\index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAiwGwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-06-18T15:19:55.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Controllers\\LoginController.cs",
@@ -85,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "RegisterCourseController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Controllers\\RegisterCourseController.cs",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Controllers\\RegisterCourseController.cs",
@@ -93,12 +110,11 @@
               "RelativeToolTip": "DoAnWebQLSV\\Controllers\\RegisterCourseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T14:32:51.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T14:32:51.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\Shared\\_Layout.cshtml",
@@ -106,12 +122,11 @@
               "RelativeToolTip": "DoAnWebQLSV\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-18T11:27:02.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T11:27:02.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "index.cshtml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Login\\index.cshtml",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\Login\\index.cshtml",
@@ -119,12 +134,11 @@
               "RelativeToolTip": "DoAnWebQLSV\\Views\\Login\\index.cshtml",
               "ViewState": "AgIAAIkAAAAAAAAAAAAUwJ0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-18T11:19:58.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T11:19:58.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Program.cs",
               "RelativeDocumentMoniker": "DoAnWebQLSV\\Program.cs",
@@ -132,8 +146,7 @@
               "RelativeToolTip": "DoAnWebQLSV\\Program.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAYwCEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T10:51:58.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T10:51:58.34Z"
             }
           ]
         }
