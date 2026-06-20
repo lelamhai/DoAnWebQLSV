@@ -51,6 +51,7 @@ namespace DoAnWebQLSV.Controllers
             string? accessToken = null;
             string? refreshToken = null;
             string? expiredToken = null;
+            string? role = null;
 
             if (!string.IsNullOrWhiteSpace(responseText))
             {
@@ -79,6 +80,11 @@ namespace DoAnWebQLSV.Controllers
                         if (dataProp.TryGetProperty("expiredToken", out var expiredTokenProp) && expiredTokenProp.ValueKind == JsonValueKind.String)
                         {
                             expiredToken = expiredTokenProp.GetString();
+                        }
+
+                        if(dataProp.TryGetProperty("role", out var roleProp) && roleProp.ValueKind == JsonValueKind.String)
+                        {
+                            role = roleProp.GetString();
                         }
                     }
 
@@ -113,6 +119,16 @@ namespace DoAnWebQLSV.Controllers
                 if (!string.IsNullOrWhiteSpace(expiredToken))
                 {
                     HttpContext.Session.SetString("ExpiredToken", expiredToken);
+                }
+
+                if (!string.IsNullOrWhiteSpace(expiredToken))
+                {
+                    HttpContext.Session.SetString("ExpiredToken", expiredToken);
+                }
+
+                if (!string.IsNullOrWhiteSpace(role))
+                {
+                    HttpContext.Session.SetString("Role", role);
                 }
 
                 HttpContext.Session.SetString("Username", username);

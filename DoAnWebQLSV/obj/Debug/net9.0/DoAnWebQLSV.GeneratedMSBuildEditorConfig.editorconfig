@@ -44,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/Documents/PTIT/HK6/HDV/Projects/DoAnWebQLSV/DoAnWebQLSV/Views/Shared/_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Documents/PTIT/HK6/HDV/Projects/DoAnWebQLSV/DoAnWebQLSV/Views/Shared/_GiangVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HaWFuZ1ZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Documents/PTIT/HK6/HDV/Projects/DoAnWebQLSV/DoAnWebQLSV/Views/Shared/_SinhVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaW5oVmllbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Documents/PTIT/HK6/HDV/Projects/DoAnWebQLSV/DoAnWebQLSV/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -59,3 +71,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/ADMIN/Documents/PTIT/HK6/HDV/Projects/DoAnWebQLSV/DoAnWebQLSV/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dm2p1o6af5
+
+[C:/Users/ADMIN/Documents/PTIT/HK6/HDV/Projects/DoAnWebQLSV/DoAnWebQLSV/Views/Shared/_NhanVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OaGFuVmllbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-iwnnfxerwx
