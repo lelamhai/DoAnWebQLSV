@@ -528,9 +528,6 @@
     .course-table td:nth-child(4)::before {
         content: "Khóa học";
     }
-    .course-table td:nth-child(5)::before {
-        content: "Tên nhân viên";
-    }
     .course-table td:nth-child(6)::before {
         content: "Ngày mở lớp";
     }
@@ -555,9 +552,6 @@
     }
     .course-table td:nth-child(4)::before {
         content: "Khóa học";
-    }
-    .course-table td:nth-child(5)::before {
-        content: "Tên nhân viên";
     }
     .course-table td:nth-child(6)::before {
         content: "Ngày mở lớp";

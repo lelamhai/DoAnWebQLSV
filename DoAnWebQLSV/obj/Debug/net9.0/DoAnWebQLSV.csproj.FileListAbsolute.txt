@@ -120,7 +120,6 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\scopedcss\bundle\DoAnWebQLSV.styles.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\scopedcss\projectbundle\DoAnWebQLSV.bundle.scp.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cp65s0muv8-rlh7qwjlkl.gz
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\okh9o3ym9b-4xvz4fdqwf.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\78gksoioom-iddj70xiis.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\fhebg3zulu-ush30ys5fv.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\3ntlhve8uf-qkgfgu2wc3.gz
@@ -132,7 +131,6 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\qy2hs279ho-1mp5xj4jb8.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cvwdbkfshu-qdoeb3uk68.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\2gvmrxv09x-1zliuqvgun.gz
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\efuwb6xjup-fjguvagr8k.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\nywhsohnlk-8bmt1yyi55.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\6ci54ib2sv-2r1djxj1bs.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\2zjp3oplbt-q8bi7gd4av.gz
@@ -218,3 +216,5 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\scopedcss\Views\Shared\_NhanVien.cshtml.rz.scp.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\f5k3ihnbaa-zri8d6brjl.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\3dqt8uyda9-zri8d6brjl.gz
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\okh9o3ym9b-r759nl9zn4.gz
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\efuwb6xjup-qwgke7ejiw.gz

@@ -4,12 +4,12 @@
     var role = Context.Session.GetString("Role");
     switch(role)
     {
-        case "Admin":
-            Layout = "_Admin";
-            break;
-        case "NV":
-            Layout = "_NhanVien";
-            break;
+        // case "Admin":
+        //     Layout = "_Admin";
+        //     break;
+        // case "NV":
+        //     Layout = "_NhanVien";
+        //     break;
         case "GV":
             Layout = "_GiangVien";
             break;
@@ -17,7 +17,7 @@
             Layout = "_SinhVien";
             break;
         default:
-            Layout = "_Layout";
+            Layout = "_NhanVien";
             break;
 	}
    

@@ -1,4 +1,5 @@
-using DoAnWebQLSV.Models;
+using DoAnWebQLSV.Models.Account;
+using DoAnWebQLSV.Models.Classroom;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Diagnostics;
@@ -32,9 +33,13 @@ namespace DoAnWebQLSV.Controllers
             {
                 var classrooms = await GetClassroomsAsync(client);
                 var accountInfo = await GetAccountInfoAsync(client, username);
+                var statusClassroom = await GetStatusClassroomAsync(client);
+                var faculty = await GetFacultyAsync(client);
 
                 ViewBag.Classrooms = classrooms;
                 ViewBag.AccountInfo = accountInfo?.Data;
+                ViewBag.StatusClassroom = statusClassroom.Data;
+                ViewBag.Faculty = faculty.Data;
             }
             catch (Exception ex)
             {
@@ -54,7 +59,7 @@ namespace DoAnWebQLSV.Controllers
                 throw new Exception($"API lớp lỗi {(int)response.StatusCode}: {responseText}");
             }
 
-            var result = JsonSerializer.Deserialize<ClassroomViewModel>(
+            var result = JsonSerializer.Deserialize<ClassroomModel>(
                 responseText,
                 new JsonSerializerOptions
                 {
@@ -100,6 +105,146 @@ namespace DoAnWebQLSV.Controllers
             );
 
             return result;
+        }
+
+        private async Task<StatusClassroomModel> GetStatusClassroomAsync(HttpClient client)
+        {
+            var response = await client.GetAsync("https://localhost:7141/api/v1/private/Classroom/get-status-classrooms");
+            var responseText = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"API trạng thái lớp lỗi {(int)response.StatusCode}: {responseText}");
+            }
+            var result = JsonSerializer.Deserialize<StatusClassroomModel>(
+                responseText,
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                }
+            );
+            return result;
+        }
+
+        private async Task<FacultyModel> GetFacultyAsync(HttpClient client)
+        {
+            var response = await client.GetAsync("https://localhost:7141/api/v1/private/Classroom/get-faculty");
+            var responseText = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"API trạng thái lớp lỗi {(int)response.StatusCode}: {responseText}");
+            }
+            var result = JsonSerializer.Deserialize<FacultyModel>(
+                responseText,
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                }
+            );
+            return result;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Search(string keyword)
+        {
+            var accessToken = HttpContext.Session.GetString("AccessToken");
+            var username = HttpContext.Session.GetString("Username");
+
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                TempData["LoginRequired"] = "Vui lòng đăng nhập để xem dữ liệu.";
+                return RedirectToAction("Index", "Login");
+            }
+
+            using var client = new HttpClient();
+
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", accessToken);
+
+            try
+            {
+                var url = QueryHelpers.AddQueryString(
+                    "https://localhost:7141/api/v1/private/Classroom/search",
+                    "keyword",
+                    keyword ?? ""
+                );
+
+                var response = await client.GetAsync(url);
+                var responseText = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception($"API tìm kiếm lớp lỗi {(int)response.StatusCode}: {responseText}");
+                }
+
+                var result = JsonSerializer.Deserialize<ClassroomModel>(
+                    responseText,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }
+                );
+
+                var accountInfo = await GetAccountInfoAsync(client, username);
+                var statusClassroom = await GetStatusClassroomAsync(client);
+                var faculty = await GetFacultyAsync(client);
+
+                ViewBag.Classrooms = result?.Data;
+                ViewBag.AccountInfo = accountInfo?.Data;
+                ViewBag.StatusClassroom = statusClassroom.Data;
+                ViewBag.Faculty = faculty.Data;
+                ViewBag.Keyword = keyword;
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ApiError = ex.Message;
+            }
+
+            return View("Index");
+        }
+    
+
+        [HttpDelete]
+        public async Task<IActionResult>Delete(string maLop)
+        {
+            var accessToken = HttpContext.Session.GetString("AccessToken");
+            var username = HttpContext.Session.GetString("Username");
+
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                TempData["LoginRequired"] = "Vui lòng đăng nhập để xem dữ liệu.";
+                return RedirectToAction("Index", "Login");
+            }
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", accessToken);
+            try
+            {
+                var url = $"https://localhost:7141/api/v1/private/Classroom/delete/{Uri.EscapeDataString(maLop)}";
+
+                var response = await client.DeleteAsync(url);
+                var responseText = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = JsonSerializer.Deserialize<DeleteModel>(
+                        responseText,
+                        new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        }
+                    );
+
+                    return Ok();
+                }
+
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ApiError = ex.Message;
+            }
+
+            return View("Index");
         }
     }
 }

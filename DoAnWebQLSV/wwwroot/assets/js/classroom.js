@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tbody?.addEventListener('click', (event) => {
         const editBtn = event.target.closest('.edit-btn');
-        const deleteBtn = event.target.closest('.delete-btn');
+        //const deleteBtn = event.target.closest('.delete-btn');
         const row = event.target.closest('tr');
 
         // debug logging to help diagnose missing popup
@@ -280,12 +280,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (deleteBtn && row) {
-            if (window.confirm(`Xóa sinh viên ${row.dataset.masv || ''}?`)) {
-                row.remove();
-                applyFilters();
-            }
-        }
+        //if (deleteBtn && row) {
+        //    if (window.confirm(`Xóa sinh viên ${row.dataset.masv || ''}?`)) {
+        //        row.remove();
+        //        applyFilters();
+        //    }
+        //}
     });
 
     // Fallback: capture clicks on any edit button (useful if delegation to tbody misses some elements)

@@ -1,6 +1,8 @@
-﻿@{
+﻿@using DoAnWebQLSV.Models.Classroom
+@{
     var classrooms = ViewBag.Classrooms as LopData;
-    // var accountInfo = ViewBag.AccountInfo as AccountInfoData;
+    var statusClassroom = ViewBag.StatusClassroom;
+	var faculty = ViewBag.Faculty;
 }
 
 @section Styles {
@@ -14,17 +16,15 @@
                 <h1>Quản lý lớp học</h1>
             </div>
         </div>
-        <span class="status-badge">Tổng 6 lớp học</span>
     </div>
 
     <div class="table-card">
         <div class="table-toolbar">
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="student-search" placeholder="Tìm kiếm theo mã lớp, tên lớp" />
+                <input type="text" id="student-search" placeholder="Tìm kiếm theo tên lớp" />
             </div>
             <div class="toolbar-actions">
-                <button class="filter-btn" id="filter-toggle" aria-expanded="false"><i class="fa-solid fa-filter"></i> Lọc</button>
                 <button class="add-course-btn" type="button" id="add-student-btn">
                     <i class="fa-solid fa-circle-plus"></i>
                     <span>Thêm lớp học</span>
@@ -72,7 +72,6 @@
                         <th>Mã lớp</th>
                         <th>Tên lớp</th>
                         <th>Khóa học</th>
-                        <th>Mã nhân viên</th>
                         <th>Ngày mở lớp</th>
                         <th>Trạng thái</th>
                         <th class="actions-header"></th>
@@ -88,10 +87,9 @@
                                 <td class="code">@item.MaLop</td>
                                 <td>@item.TenLop</td>
                                 <td>@item.KhoaHoc</td>
-                                <td>@item.TenNhanVien</td>
                                 <td>@item.NgayMoLop</td>
                                 <td><span class="student-status status-active">@item.TrangThai</span></td>
-                                <td class="actions-cell"><div class="course-actions"><button type="button" class="action-btn edit-btn" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button><button type="button" class="action-btn delete-btn" title="Xóa" aria-label="Xóa lớp học"><i class="fa-solid fa-trash"></i></button></div></td>
+                                <td class="actions-cell"><div class="course-actions"><button type="button" class="action-btn edit-btn" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button><button type="button" class="action-btn delete-btn" data-malop="@item.MaLop" title="Xóa" aria-label="Xóa lớp học"><i class="fa-solid fa-trash"></i></button></div></td>
                             </tr>
                         }
                     }
@@ -125,10 +123,6 @@
         </div>
     </div>
 </section>
-
-@section Scripts {
-    <script src="~/assets/js/classroom.js"></script>
-}
 <!-- Slide-in Add Classroom Panel -->
 <div class="slide-panel-overlay" id="add-panel-overlay" aria-hidden="true"></div>
 <aside class="slide-panel" id="add-student-panel" aria-hidden="true" role="dialog" aria-label="Thêm lớp học">
@@ -140,48 +134,48 @@
         <div class="form-row two-cols">
             <div>
                 <label for="add-masv">Mã lớp</label>
-                <input type="text" id="add-masv" placeholder="CNTT04" />
+                <input type="text" id="add-masv" />
             </div>
             <div>
                 <label for="add-ho">Tên lớp</label>
-                <input type="text" id="add-ho" placeholder="Công nghệ thông tin 04" />
+                <input type="text" id="add-ho" />
             </div>
         </div>
         <div class="form-row two-cols">
             <div>
                 <label for="edit-ten">Khóa học</label>
-                <select id="edit-ten" class="filter-select">
-                    <option>K23</option>
-                    <option>K22</option>
-                    <option>K21</option>
-                </select>
+                <input type="text" id="add-ho" />
             </div>
             <div>
                 <label for="edit-phai">Khoa</label>
                 <select id="edit-phai" class="filter-select">
-                    <option>CNTT</option>
-                    <option>KTPM</option>
-                    <option>HTTT</option>
+                    @if (faculty != null)
+                    {
+                        @foreach (var item in faculty)
+                        {
+                            <option value="@item.MaKhoa">@item.TenKhoa</option>
+                        }
+                    }
                 </select>
             </div>
         </div>
         <div class="form-row two-cols">
             <div>
-                <label for="edit-sodienthoai">Mã nhân viên</label>
-                <input type="text" id="edit-sodienthoai" />
-            </div>
-            <div>
                 <label for="edit-ngaysinh">Ngày mở lớp</label>
                 <input type="text" id="edit-ngaysinh" class="date-picker" />
             </div>
-        </div>
-        <div class="form-row">
-            <label for="add-danghoc">Trạng thái</label>
-            <select id="add-danghoc" class="filter-select">
-                <option>Hoạt động</option>
-                <option>Tạm dừng</option>
-                <option>Kết thúc</option>
-            </select>
+            <div>
+                <label for="add-danghoc">Trạng thái</label>
+                <select id="add-danghoc" class="filter-select">
+                    @if (statusClassroom != null)
+                    {
+                        @foreach (var item in statusClassroom)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+            </div>
         </div>
 
         <div class="form-actions">
@@ -252,3 +246,47 @@
         </div>
     </form>
 </aside>
+@section Scripts {
+    <script src="~/assets/js/classroom.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".delete-btn");
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", async function () {
+                const maLop = this.getAttribute("data-malop");
+
+                if (!maLop) {
+                    alert("Không tìm thấy mã lớp cần xóa.");
+                    return;
+                }
+
+                const confirmDelete = confirm(`Bạn có chắc muốn xóa lớp ${maLop} không?`);
+
+                if (!confirmDelete) {
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`/Classroom/Delete?maLop=${encodeURIComponent(maLop)}`, {
+                        method: "DELETE"
+                    });
+
+                    const text = await response.text();
+
+                    if (response.ok) {
+                        alert("Xóa lớp thành công.");
+                        window.location.reload();
+                    } else {
+                        alert("Xóa thất bại.");
+                    }
+                } catch (error) {
+                    alert("Có lỗi xảy ra khi xóa lớp: " + error.message);
+                }
+            });
+        });
+    });
+</script>
+}
+
+
