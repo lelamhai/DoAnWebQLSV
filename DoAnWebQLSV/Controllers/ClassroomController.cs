@@ -201,7 +201,6 @@ namespace DoAnWebQLSV.Controllers
 
             return View("Index");
         }
-    
 
         [HttpDelete]
         public async Task<IActionResult>Delete(string maLop)
@@ -245,6 +244,121 @@ namespace DoAnWebQLSV.Controllers
             }
 
             return View("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(string maLop)
+        {
+            var accessToken = HttpContext.Session.GetString("AccessToken");
+            var username = HttpContext.Session.GetString("Username");
+
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                TempData["LoginRequired"] = "Vui lòng đăng nhập để xem dữ liệu.";
+                return RedirectToAction("Index", "Login");
+            }
+
+            using var client = new HttpClient();
+
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", accessToken);
+            try
+            {
+                var url = $"https://localhost:7141/api/v1/private/Classroom/detail/{Uri.EscapeDataString(maLop)}";
+
+                var response = await client.GetAsync(url);
+                var responseText = await response.Content.ReadAsStringAsync();
+                if (!response.IsSuccessStatusCode)
+                {
+                    return BadRequest(new
+                    {
+                        message = "Lấy chi tiết lớp thất bại.",
+                        error = responseText
+                    });
+                }
+                var result = JsonSerializer.Deserialize<DetailModel>(
+                       responseText,
+                       new JsonSerializerOptions
+                       {
+                           PropertyNameCaseInsensitive = true
+                       }
+                   );
+                var lop = result?.Data;
+
+                if (lop == null)
+                {
+                    return NotFound(new
+                    {
+                        message = "Không tìm thấy lớp."
+                    });
+                }
+
+                return Ok(lop);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ApiError = ex.Message;
+            }
+
+            return View("Index");
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(UpdateModel model)
+        {
+            var accessToken = HttpContext.Session.GetString("AccessToken");
+
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                TempData["Error"] = "Vui lòng đăng nhập để cập nhật dữ liệu.";
+                return RedirectToAction("Index", "Login");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.MaLop))
+            {
+                TempData["Error"] = "Mã lớp không hợp lệ.";
+                return RedirectToAction("Index");
+            }
+
+            using var client = new HttpClient();
+
+            client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
+            try
+            {
+                var url = $"https://localhost:7141/api/v1/private/Classroom/update/{Uri.EscapeDataString(model.MaLop)}";
+
+                var json = JsonSerializer.Serialize(model, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                });
+
+                var content = new StringContent(
+                    json,
+                    System.Text.Encoding.UTF8,
+                    "application/json"
+                );
+
+                var response = await client.PutAsync(url, content);
+                var responseText = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    TempData["Error"] = "Cập nhật lớp thất bại: " + responseText;
+                    return RedirectToAction("Index");
+                }
+
+                TempData["Success"] = "Cập nhật lớp thành công.";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Có lỗi xảy ra khi cập nhật lớp: " + ex.Message;
+                return RedirectToAction("Index");
+            }
         }
     }
 }

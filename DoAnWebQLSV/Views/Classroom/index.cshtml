@@ -1,6 +1,5 @@
-﻿@using DoAnWebQLSV.Models.Classroom
-@{
-    var classrooms = ViewBag.Classrooms as LopData;
+﻿@{
+    var classrooms = ViewBag.Classrooms;
     var statusClassroom = ViewBag.StatusClassroom;
 	var faculty = ViewBag.Faculty;
 }
@@ -89,7 +88,7 @@
                                 <td>@item.KhoaHoc</td>
                                 <td>@item.NgayMoLop</td>
                                 <td><span class="student-status status-active">@item.TrangThai</span></td>
-                                <td class="actions-cell"><div class="course-actions"><button type="button" class="action-btn edit-btn" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button><button type="button" class="action-btn delete-btn" data-malop="@item.MaLop" title="Xóa" aria-label="Xóa lớp học"><i class="fa-solid fa-trash"></i></button></div></td>
+                                <td class="actions-cell"><div class="course-actions"><button type="button" class="action-btn edit-btn" data-malop="@item.MaLop" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button><button type="button" class="action-btn delete-btn" data-malop="@item.MaLop" title="Xóa" aria-label="Xóa lớp học"><i class="fa-solid fa-trash"></i></button></div></td>
                             </tr>
                         }
                     }
@@ -103,10 +102,10 @@
 
         <div class="pagination-wrapper">
             <nav class="pagination">
-                @if (Model != null)
+                @if (classrooms != null)
                 {
                     <button class="pagination-btn pagination-prev" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></button>
-                    for(int i = 1; i <= Model.Pagination.TotalCount; i++)
+                    for (int i = 1; i <= classrooms.Pagination.TotalPages; i++)
                     {
                         if(i==1)
                         {
@@ -144,7 +143,7 @@
         <div class="form-row two-cols">
             <div>
                 <label for="edit-ten">Khóa học</label>
-                <input type="text" id="add-ho" />
+                <input type="text" id="add-hoc" />
             </div>
             <div>
                 <label for="edit-phai">Khoa</label>
@@ -192,57 +191,62 @@
         <h3>Chỉnh sửa lớp học</h3>
         <button type="button" class="close-panel" id="close-edit-panel" aria-label="Đóng">&times;</button>
     </div>
-    <form id="edit-student-form" class="slide-panel-body">
+    <form id="edit-student-form" class="slide-panel-body" asp-controller="Classroom" asp-action="Update" method="post">
+        @Html.AntiForgeryToken()
         <div class="form-row two-cols">
             <div>
                 <label for="edit-masv">Mã lớp</label>
-                <input type="text" id="edit-masv" />
+                <input type="text" id="edit-masv" name="MaLop" readonly />
             </div>
             <div>
-                <label for="edit-ho">Tên lớp</label>
-                <input type="text" id="edit-ho" />
+                <label for="edit-tenlop">Tên lớp</label>
+                <input type="text" id="edit-tenlop" name="TenLop" />
             </div>
         </div>
         <div class="form-row two-cols">
             <div>
-                <label for="add-ten">Khóa học</label>
-                <select id="add-ten" class="filter-select">
-                    <option>K23</option>
-                    <option>K22</option>
-                    <option>K21</option>
-                </select>
+                <label for="edit-khoahoc">Khóa học</label>
+                <input type="text" id="edit-khoahoc" name="KhoaHoc" />
             </div>
             <div>
-                <label for="add-phai">Khoa</label>
-                <select id="add-phai" class="filter-select">
-                    <option>CNTT</option>
-                    <option>KTPM</option>
-                    <option>HTTT</option>
+                <label for="edit-khoa">Khoa</label>
+                <select id="edit-khoa" name="MaKhoa" class="filter-select">
+                    @if (faculty != null)
+                    {
+                        @foreach (var item in faculty)
+                        {
+                            <option value="@item.MaKhoa">@item.TenKhoa</option>
+                        }
+                    }
                 </select>
             </div>
         </div>
         <div class="form-row two-cols">
+            
             <div>
-                <label for="add-sodienthoai">Mã nhân viên</label>
-                <input type="text" id="add-sodienthoai" placeholder="NV000001" />
+                <label for="edit-ngaymolop">Ngày mở lớp</label>
+                <input type="text" id="edit-ngaymolop" name="NgayMoLop" class="date-picker" placeholder="dd/mm/yyyy" />
             </div>
             <div>
-                <label for="add-ngaysinh">Ngày mở lớp</label>
-                <input type="text" id="add-ngaysinh" class="date-picker" placeholder="dd/mm/yyyy" />
+                <div class="form-row">
+                    <label for="edit-trangthai">Trạng thái</label>
+                    <select id="edit-trangthai" name="TrangThai" class="filter-select">
+                        @if (statusClassroom != null)
+                        {
+                            @foreach (var item in statusClassroom)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        }
+                    </select>
+                </div>
             </div>
         </div>
-        <div class="form-row">
-            <label for="edit-danghoc">Trạng thái</label>
-            <select id="edit-danghoc" class="filter-select">
-                <option>Hoạt động</option>
-                <option>Tạm dừng</option>
-                <option>Kết thúc</option>
-            </select>
-        </div>
+        
 
         <div class="form-actions">
             <button type="button" id="cancel-edit-student" class="filter-btn">Hủy</button>
-            <button type="button" id="submit-edit-student" class="add-course-btn">Lưu thay đổi</button>
+            <button type="submit" id="submit-edit-student" class="add-course-btn">Lưu thay đổi</button>
         </div>
     </form>
 </aside>
@@ -251,6 +255,8 @@
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         const deleteButtons = document.querySelectorAll(".delete-btn");
+                const editButtons = document.querySelectorAll(".edit-btn");
+
 
         deleteButtons.forEach(button => {
             button.addEventListener("click", async function () {
@@ -285,7 +291,51 @@
                 }
             });
         });
+
+
+            editButtons.forEach(button => {
+                button.addEventListener("click", async function () {
+                    const maLop = this.getAttribute("data-malop");
+
+                    if (!maLop) {
+                        alert("Không tìm thấy mã lớp cần xóa.");
+                        return;
+                    }
+
+                   
+                    try {
+                        const response = await fetch(`/Classroom/Detail?maLop=${encodeURIComponent(maLop)}`, {
+                            method: "GET"
+                        });
+
+                            const text  = await response.text();
+                                const data = JSON.parse(text);
+                        if (response.ok) {
+                            const lop = data[0];
+
+                                console.log(lop);
+                                        console.log(lop.trangthai);
+
+                            document.getElementById("edit-masv").value = lop.malop;
+                            document.getElementById("edit-tenlop").value = lop.tenlop;
+                            document.getElementById("edit-khoahoc").value = lop.khoahoc;
+                            document.getElementById("edit-ngaymolop").value = lop.ngaymolop;
+
+                                 document.getElementById("edit-trangthai").value = String(lop.trangthai);
+                                         document.getElementById("edit-khoa").value = String(lop.makhoa);
+                        } else {
+                            alert("edit lỗi.");
+                        }
+                    } catch (error) {
+                        alert("Có lỗi xảy ra khi xóa lớp: " + error.message);
+                    }
+                });
+            });
+
+
     });
+
+          
 </script>
 }
 

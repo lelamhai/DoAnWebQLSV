@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addForm = document.getElementById('add-student-form');
     const submitAdd = document.getElementById('submit-add-student');
-    const submitEdit = document.getElementById('submit-edit-student');
+    
     const cancelAdd = document.getElementById('cancel-add-student');
     const cancelEdit = document.getElementById('cancel-edit-student');
     const closeAdd = document.getElementById('close-add-panel');
@@ -315,21 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
             window.jQuery('.date-picker').datepicker('update', '');
         }
         closePanel(addPanel, addOverlay);
-        applyFilters();
-    });
-
-    submitEdit?.addEventListener('click', () => {
-        if (!activeRow) return;
-        const data = getFormData('edit');
-        if (!data.masv || !data.ho || !data.ten) {
-            window.alert('Vui lòng nhập ít nhất Mã SV, Họ và Tên.');
-            return;
-        }
-
-        const updated = renderRow(data);
-        activeRow.replaceWith(updated);
-        activeRow = updated;
-        closePanel(editPanel, editOverlay);
         applyFilters();
     });
 });
