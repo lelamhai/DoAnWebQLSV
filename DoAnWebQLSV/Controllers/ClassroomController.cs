@@ -303,7 +303,6 @@ namespace DoAnWebQLSV.Controllers
             return View("Index");
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(UpdateModel model)

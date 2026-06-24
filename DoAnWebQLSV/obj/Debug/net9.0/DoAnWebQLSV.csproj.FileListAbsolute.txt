@@ -121,7 +121,6 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\scopedcss\projectbundle\DoAnWebQLSV.bundle.scp.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cp65s0muv8-rlh7qwjlkl.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\78gksoioom-iddj70xiis.gz
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\fhebg3zulu-ush30ys5fv.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\3ntlhve8uf-qkgfgu2wc3.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\6otpp9vrh8-xzckkmxgtm.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cpp3i4sel1-sap2vq5n4v.gz
@@ -218,3 +217,4 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\3dqt8uyda9-zri8d6brjl.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\okh9o3ym9b-r759nl9zn4.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\efuwb6xjup-7ctqwp0auo.gz
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\fhebg3zulu-nflqff7spf.gz

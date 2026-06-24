@@ -104,19 +104,19 @@
             <nav class="pagination">
                 @if (classrooms != null)
                 {
-                    <button class="pagination-btn pagination-prev" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></button>
+                    <a href="?page=1" class="pagination-btn pagination-prev" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></a>
                     for (int i = 1; i <= classrooms.Pagination.TotalPages; i++)
                     {
                         if(i==1)
                         {
-                            <button class="pagination-page active">@i</button>
+                            <a href="?page=@i" class="pagination-page active">@i</a>
                         }
                         else
                         {
-                            <button class="pagination-page">@i</button>
+                            <a href="?page=@i" class="pagination-page">@i</a>
                         }
                     }
-                    <button class="pagination-btn pagination-next" title="Trang sau"><i class="fa-solid fa-chevron-right"></i></button>
+                    <a href="?page=@classrooms.Pagination.TotalPages" class="pagination-btn pagination-next" title="Trang sau"><i class="fa-solid fa-chevron-right"></i></a>
                 }
             </nav>
         </div>
