@@ -359,5 +359,48 @@ namespace DoAnWebQLSV.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(UpdateModel model)
+        {
+            var accessToken = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                TempData["Error"] = "Vui lòng đăng nhập để tạo lớp.";
+                return RedirectToAction("Index", "Login");
+            }
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+            try
+            {
+                var url = "https://localhost:7141/api/v1/private/Classroom/create";
+                var json = JsonSerializer.Serialize(model, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                });
+                var content = new StringContent(
+                    json,
+                    System.Text.Encoding.UTF8,
+                    "application/json"
+                );
+                var response = await client.PostAsync(url, content);
+                var responseText = await response.Content.ReadAsStringAsync();
+                if (!response.IsSuccessStatusCode)
+                {
+                    TempData["Error"] = responseText;
+                    return RedirectToAction("Index");
+                }
+
+                TempData["Success"] = responseText;
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Có lỗi xảy ra khi tạo lớp: " + ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

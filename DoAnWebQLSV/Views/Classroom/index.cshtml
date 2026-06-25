@@ -7,6 +7,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/assets/css/classroom.css" />
 }
+
 <section class="content-wrap">
     <div class="page-title-row">
         <div class="page-title-group">
@@ -129,25 +130,26 @@
         <h3>Thêm lớp học</h3>
         <button type="button" class="close-panel" id="close-add-panel" aria-label="Đóng">&times;</button>
     </div>
-    <form id="add-student-form" class="slide-panel-body">
+    <form id="add-student-form" class="slide-panel-body" asp-controller="Classroom" asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
         <div class="form-row two-cols">
             <div>
                 <label for="add-masv">Mã lớp</label>
-                <input type="text" id="add-masv" />
+                <input type="text" id="add-masv" name="MaLop" />
             </div>
             <div>
                 <label for="add-ho">Tên lớp</label>
-                <input type="text" id="add-ho" />
+                <input type="text" id="add-ho" name="TenLop" />
             </div>
         </div>
         <div class="form-row two-cols">
             <div>
                 <label for="edit-ten">Khóa học</label>
-                <input type="text" id="add-hoc" />
+                <input type="text" id="add-hoc" name="KhoaHoc" />
             </div>
             <div>
                 <label for="edit-phai">Khoa</label>
-                <select id="edit-phai" class="filter-select">
+                <select id="edit-phai" class="filter-select" name="MaKhoa">
                     @if (faculty != null)
                     {
                         @foreach (var item in faculty)
@@ -161,11 +163,11 @@
         <div class="form-row two-cols">
             <div>
                 <label for="edit-ngaysinh">Ngày mở lớp</label>
-                <input type="text" id="edit-ngaysinh" class="date-picker" />
+                <input type="text" id="edit-ngaysinh" class="date-picker" name="NgayMoLop" />
             </div>
             <div>
                 <label for="add-danghoc">Trạng thái</label>
-                <select id="add-danghoc" class="filter-select">
+                <select id="add-danghoc" class="filter-select" name="TrangThai">
                     @if (statusClassroom != null)
                     {
                         @foreach (var item in statusClassroom)
@@ -179,7 +181,7 @@
 
         <div class="form-actions">
             <button type="button" id="cancel-add-student" class="filter-btn">Hủy</button>
-            <button type="button" id="submit-add-student" class="add-course-btn">Thêm mới</button>
+            <button type="submit" id="submit-add-student" class="add-course-btn">Thêm mới</button>
         </div>
     </form>
 </aside>
@@ -250,6 +252,8 @@
         </div>
     </form>
 </aside>
+
+
 @section Scripts {
     <script src="~/assets/js/classroom.js"></script>
     <script>
@@ -333,10 +337,53 @@
             });
 
 
-    });
-
-          
+    });       
 </script>
+    @{
+        var success = TempData["Success"]?.ToString();
+        var error = TempData["Error"]?.ToString();
+    }
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const successMessage = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(success));
+            const errorMessage = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(error));
+
+            function getMessage(value) {
+                if (!value) return "";
+
+                // Trường hợp value là JSON thuần: {"message":"...","data":null}
+                try {
+                    const obj = JSON.parse(value);
+                    if (obj.message) return obj.message;
+                    if (obj.Message) return obj.Message;
+                } catch { }
+
+                // Trường hợp value bị thêm tiền tố: Tạo lớp thất bại: {"message":"..."}
+                const jsonStart = value.indexOf("{");
+                if (jsonStart >= 0) {
+                    try {
+                        const jsonPart = value.substring(jsonStart);
+                        const obj = JSON.parse(jsonPart);
+
+                        if (obj.message) return obj.message;
+                        if (obj.Message) return obj.Message;
+                    } catch { }
+                }
+
+                // Trường hợp chỉ là text bình thường
+                return value;
+            }
+
+            if (successMessage) {
+                alert(getMessage(successMessage));
+            }
+
+            if (errorMessage) {
+                alert(getMessage(errorMessage));
+            }
+        });
+    </script>
 }
 
 
