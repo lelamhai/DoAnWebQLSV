@@ -1,6 +1,6 @@
 ﻿namespace DoAnWebQLSV.Models.Classroom
 {
-    public class UpdateModel
+    public class UpdateClassroom
     {
         public string MaLop { get; set; } = string.Empty;
 

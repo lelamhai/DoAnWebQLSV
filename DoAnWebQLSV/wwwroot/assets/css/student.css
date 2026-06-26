@@ -500,39 +500,46 @@
 /* Mobile đứng (portrait) */
 @media screen and (max-width: 600px) and (orientation: portrait) {
     .course-table td:nth-child(1)::before {
-        content: "Ảnh";
+        content: "Tên lớp";
     }
+
     .course-table td:nth-child(2)::before {
-        content: "Mã lớp";
-    }
-    .course-table td:nth-child(3)::before {
         content: "Mã sinh viên";
     }
-    .course-table td:nth-child(4)::before {
+
+    .course-table td:nth-child(3)::before {
         content: "Họ";
     }
-    .course-table td:nth-child(5)::before {
+
+    .course-table td:nth-child(4)::before {
         content: "Tên";
     }
-    .course-table td:nth-child(6)::before {
+
+    .course-table td:nth-child(5)::before {
         content: "Phái";
     }
-    .course-table td:nth-child(7)::before {
+
+    .course-table td:nth-child(6)::before {
         content: "Số điện thoại";
     }
-    .course-table td:nth-child(8)::before {
+
+    .course-table td:nth-child(7)::before {
         content: "Ngày sinh";
     }
-    .course-table td:nth-child(9)::before {
+
+    .course-table td:nth-child(8)::before {
         content: "Email";
     }
-    .course-table td:nth-child(10)::before {
+
+    .course-table td:nth-child(9)::before {
         content: "Địa chỉ";
     }
-    .course-table td:nth-child(11)::before {
+
+    .course-table td:nth-child(10)::before {
         content: "Trạng thái";
     }
-    .course-table td:nth-child(12)::before {
+
+    .course-table td:nth-child(11)::before {
         content: "Thao tác";
     }
 }
@@ -540,39 +547,36 @@
 /* Mobile nằm (landscape) */
 @media screen and (max-width: 800px) and (orientation: landscape) {
     .course-table td:nth-child(1)::before {
-        content: "Ảnh";
+        content: "Tên lớp";
     }
     .course-table td:nth-child(2)::before {
-        content: "Mã lớp";
-    }
-    .course-table td:nth-child(3)::before {
         content: "Mã sinh viên";
     }
-    .course-table td:nth-child(4)::before {
+    .course-table td:nth-child(3)::before {
         content: "Họ";
     }
-    .course-table td:nth-child(5)::before {
+    .course-table td:nth-child(4)::before {
         content: "Tên";
     }
-    .course-table td:nth-child(6)::before {
+    .course-table td:nth-child(5)::before {
         content: "Phái";
     }
-    .course-table td:nth-child(7)::before {
+    .course-table td:nth-child(6)::before {
         content: "Số điện thoại";
     }
-    .course-table td:nth-child(8)::before {
+    .course-table td:nth-child(7)::before {
         content: "Ngày sinh";
     }
-    .course-table td:nth-child(9)::before {
+    .course-table td:nth-child(8)::before {
         content: "Email";
     }
-    .course-table td:nth-child(10)::before {
+    .course-table td:nth-child(9)::before {
         content: "Địa chỉ";
     }
-    .course-table td:nth-child(11)::before {
+    .course-table td:nth-child(10)::before {
         content: "Trạng thái";
     }
-    .course-table td:nth-child(12)::before {
+    .course-table td:nth-child(11)::before {
         content: "Thao tác";
     }
 }

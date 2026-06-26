@@ -127,7 +127,6 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\4y86whxkxb-6yiba37fhs.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\smclawhqpx-zecy1g8hs2.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\5cr7wktagc-5ipweew5fc.gz
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\qy2hs279ho-1mp5xj4jb8.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cvwdbkfshu-qdoeb3uk68.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\2gvmrxv09x-1zliuqvgun.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\nywhsohnlk-8bmt1yyi55.gz
@@ -137,7 +136,6 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\e5zwx0lxod-cd19erbiw2.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\najtykw0yv-h05ieorgt1.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\htq44pe231-5ipweew5fc.gz
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\f67mdu5twb-fjguvagr8k.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\odrt46r9c8-5g3buzdja2.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\7k0t3irkwl-ovl9eze795.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\qjek5oqmsj-b9sayid5wm.gz
@@ -218,3 +216,5 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\okh9o3ym9b-r759nl9zn4.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\efuwb6xjup-7ctqwp0auo.gz
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\fhebg3zulu-nflqff7spf.gz
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\qy2hs279ho-rw3v83x40x.gz
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\f67mdu5twb-i27s9fg6lm.gz

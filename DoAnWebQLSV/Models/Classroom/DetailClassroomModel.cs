@@ -2,7 +2,7 @@
 
 namespace DoAnWebQLSV.Models.Classroom
 {
-    public class DetailModel
+    public class DetailClassroomModel
     {
         [JsonPropertyName("message")]
         public string Message { get; set; } = string.Empty;

@@ -108,7 +108,7 @@
                     <a href="?page=1" class="pagination-btn pagination-prev" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></a>
                     for (int i = 1; i <= classrooms.Pagination.TotalPages; i++)
                     {
-                        if(i==1)
+                        if (i == classrooms.Pagination.Page)
                         {
                             <a href="?page=@i" class="pagination-page active">@i</a>
                         }

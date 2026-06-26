@@ -107,7 +107,7 @@ namespace DoAnWebQLSV.Controllers
             return result;
         }
 
-        private async Task<StatusClassroomModel> GetStatusClassroomAsync(HttpClient client)
+        private async Task<StatusTableModel> GetStatusClassroomAsync(HttpClient client)
         {
             var response = await client.GetAsync("https://localhost:7141/api/v1/private/Classroom/get-status-classrooms");
             var responseText = await response.Content.ReadAsStringAsync();
@@ -115,7 +115,7 @@ namespace DoAnWebQLSV.Controllers
             {
                 throw new Exception($"API trạng thái lớp lỗi {(int)response.StatusCode}: {responseText}");
             }
-            var result = JsonSerializer.Deserialize<StatusClassroomModel>(
+            var result = JsonSerializer.Deserialize<StatusTableModel>(
                 responseText,
                 new JsonSerializerOptions
                 {
@@ -276,7 +276,7 @@ namespace DoAnWebQLSV.Controllers
                         error = responseText
                     });
                 }
-                var result = JsonSerializer.Deserialize<DetailModel>(
+                var result = JsonSerializer.Deserialize<DetailClassroomModel>(
                        responseText,
                        new JsonSerializerOptions
                        {
@@ -305,7 +305,7 @@ namespace DoAnWebQLSV.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(UpdateModel model)
+        public async Task<IActionResult> Update(UpdateClassroom model)
         {
             var accessToken = HttpContext.Session.GetString("AccessToken");
 
@@ -362,7 +362,7 @@ namespace DoAnWebQLSV.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(UpdateModel model)
+        public async Task<IActionResult> Create(UpdateClassroom model)
         {
             var accessToken = HttpContext.Session.GetString("AccessToken");
             if (string.IsNullOrWhiteSpace(accessToken))

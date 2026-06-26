@@ -1,0 +1,345 @@
+﻿@{
+	var students = ViewBag.Student;
+    var classrooms = ViewBag.Classrooms;
+	var status = ViewBag.Status;
+}
+@section Styles {
+    <link rel="stylesheet" href="~/assets/css/student.css" />
+}
+<section class="content-wrap">
+    <div class="page-title-row">
+        <div class="page-title-group">
+            <div class="title-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div>
+                <h1>Quản lý sinh viên</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-card">
+        <div class="table-toolbar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="student-search" placeholder="Tìm kiếm theo sinh viên" />
+            </div>
+            <div class="toolbar-actions">
+                <button class="add-course-btn" type="button" id="add-student-btn">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>Thêm sinh viên</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="course-table student-table" id="student-table">
+                <thead>
+                    <tr>
+                        <th>Tên lớp</th>
+                        <th>Mã SV</th>
+                        <th>Họ</th>
+                        <th>Tên</th>
+                        <th>Phái</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày sinh</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
+                        <th>Đang học</th>
+                        <th class="actions-header"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (students != null)
+                    {
+                        @foreach (var item in students.Items)
+                        {
+                            <tr>
+                                <td class="code">@item.TenLop</td>
+                                <td class="code">@item.MaSV</td>
+                                <td>@item.Ho</td>
+                                <td>@item.Ten</td>
+                                <td>@item.Phai</td>
+                                <td>@item.SoDienThoai</td>
+                                <td>@item.NgaySinh</td>
+                                <td class="email-cell">@item.Email</td>
+                                <td class="diachi-cell">@item.DiaChi</td>
+                                <td><span class="student-status status-active">@item.TenTrangThai</span></td>
+                                <td class="actions-cell"><div class="course-actions"><button type="button" class="action-btn edit-btn" data-masv="@item.MaSV"  title="Sửa" aria-label="Sửa sinh viên"><i class="fa-solid fa-pen"></i></button><button type="button" class="action-btn delete-btn" data-masv="@item.MaSV" title="Xóa" aria-label="Xóa sinh viên"><i class="fa-solid fa-trash"></i></button></div></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination-wrapper">
+            <nav class="pagination">
+                @if (students != null)
+                {
+                    <a href="?page=1" class="pagination-btn pagination-prev" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></a>
+                    for (int i = 1; i <= students.Pagination.TotalPages; i++)
+                    {
+                        if (i == students.Pagination.Page)
+                        {
+                            <a href="?page=@i" class="pagination-page active">@i</a>
+                        }
+                        else
+                        {
+                            <a href="?page=@i" class="pagination-page">@i</a>
+                        }
+                    }
+                    <a href="?page=@students.Pagination.TotalPages" class="pagination-btn pagination-next" title="Trang sau"><i class="fa-solid fa-chevron-right"></i></a>
+                }
+            </nav>
+        </div>
+    </div>
+</section>
+<!-- Slide-in Add Student Panel -->
+<div class="slide-panel-overlay" id="add-panel-overlay" aria-hidden="true"></div>
+<aside class="slide-panel" id="add-student-panel" aria-hidden="true" role="dialog" aria-label="Thêm sinh viên">
+    <div class="slide-panel-header">
+        <h3>Thêm sinh viên</h3>
+        <button type="button" class="close-panel" id="close-add-panel" aria-label="Đóng">&times;</button>
+    </div>
+    <form id="add-student-form" class="slide-panel-body" asp-controller="Student" asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-row two-cols">
+            <div>
+                <label for="add-malop">Mã lớp</label>
+                <select id="add-malop" class="filter-select" name="MaLop">
+                    @if (classrooms != null)
+                    {
+                        @foreach (var item in classrooms)
+                        {
+                            <option value="@item.MaLop">@item.TenLop</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div>
+                <label for="add-masv">Mã SV</label>
+                <input type="text" id="add-masv" name="MaSV"/>
+            </div>
+        </div>
+        <div class="form-row two-cols">
+            <div>
+                <label for="add-ho">Họ</label>
+                <input type="text" id="add-ho" placeholder="Nguyễn Văn" name="Ho"/>
+            </div>
+            <div>
+                <label for="add-ten">Tên</label>
+                <input type="text" id="add-ten" name="Ten" />
+            </div>
+        </div>
+        <div class="form-row two-cols">
+            <div>
+                <label for="add-phai">Phái</label>
+                <select id="add-phai" class="filter-select" name="Phai">
+                    <option value="true">Nam</option>
+                    <option value="false">Nữ</option>
+                </select>
+            </div>
+            <div>
+                <label for="add-danghoc">Đang học</label>
+                <select id="add-danghoc" class="filter-select" name="TrangThai">
+                    @if (status != null)
+                    {
+                        @foreach (var item in status)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-row two-cols">
+            <div>
+                <label for="add-sodienthoai">Số điện thoại</label>
+                <input type="text" id="add-sodienthoai" name="SoDienThoai" />
+            </div>
+            <div>
+                <label for="add-ngaysinh">Ngày sinh</label>
+                <input type="text" id="add-ngaysinh" class="date-picker" placeholder="dd/mm/yyyy" name="NgaySinh"/>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="add-email">Email</label>
+            <input type="email" id="add-email" placeholder="student@ptit.edu.vn" name="Email" />
+        </div>
+        <div class="form-row">
+            <label for="add-diachi">Địa chỉ</label>
+            <input type="text" id="add-diachi" placeholder="Địa chỉ liên hệ" name="DiaChi"/>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" id="cancel-add-student" class="filter-btn">Hủy</button>
+            <button type="submit" id="submit-add-student" class="add-course-btn">Thêm mới</button>
+        </div>
+    </form>
+</aside>
+
+<!-- Slide-in Edit Student Panel -->
+<div class="slide-panel-overlay" id="edit-panel-overlay" aria-hidden="true"></div>
+<aside class="slide-panel" id="edit-student-panel" aria-hidden="true" role="dialog" aria-label="Chỉnh sửa sinh viên">
+    <div class="slide-panel-header">
+        <h3>Chỉnh sửa sinh viên</h3>
+        <button type="button" class="close-panel" id="close-edit-panel" aria-label="Đóng">&times;</button>
+    </div>
+    <form id="edit-student-form" class="slide-panel-body" asp-controller="Student" asp-action="Update" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-row two-cols">
+            <div>
+                <label for="edit-malop">Mã lớp</label>
+                <select id="edit-malop" class="filter-select" name="MaLop">
+                    @if (classrooms != null)
+                    {
+                        @foreach (var item in classrooms)
+                        {
+                            <option value="@item.MaLop">@item.TenLop</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div>
+                <label for="edit-masv">Mã SV</label>
+                <input type="text" id="edit-masv" name="MaSV" readonly/>
+            </div>
+        </div>
+        <div class="form-row two-cols">
+            <div>
+                <label for="edit-ho">Họ</label>
+                <input type="text" id="edit-ho" name="Ho"/>
+            </div>
+            <div>
+                <label for="edit-ten">Tên</label>
+                <input type="text" id="edit-ten" name="Ten"/>
+            </div>
+        </div>
+        <div class="form-row two-cols">
+            <div>
+                <label for="edit-phai">Phái</label>
+                <select id="edit-phai" class="filter-select" name="Phai">
+                    <option value="true">Nam</option>
+                    <option value="false">Nữ</option>
+                </select>
+            </div>
+            <div>
+                <label for="edit-danghoc">Đang học</label>
+                <select id="edit-danghoc" class="filter-select" name="TrangThai">
+                    @if (status != null)
+                    {
+                        @foreach (var item in status)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-row two-cols">
+            <div>
+                <label for="edit-sodienthoai">Số điện thoại</label>
+                <input type="text" id="edit-sodienthoai" name="SoDienThoai" />
+            </div>
+            <div>
+                <label for="edit-ngaysinh">Ngày sinh</label>
+                <input type="text" id="edit-ngaysinh" class="date-picker" name="NgaySinh" />
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="edit-email">Email</label>
+            <input type="email" id="edit-email" name="Email" />
+        </div>
+        <div class="form-row">
+            <label for="edit-diachi">Địa chỉ</label>
+            <input type="text" id="edit-diachi" name="DiaChi" />
+        </div>
+
+        <div class="form-actions">
+            <button type="button" id="cancel-edit-student" class="filter-btn">Hủy</button>
+            <button type="submit" id="submit-edit-student" class="add-course-btn">Lưu thay đổi</button>
+        </div>
+    </form>
+</aside>
+@section Scripts {
+    <script src="~/assets/js/student.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+            const editButtons = document.querySelectorAll(".edit-btn");
+
+            deleteButtons.forEach(button => {
+                button.addEventListener("click", async function () {
+                    const maLop = this.getAttribute("data-malop");
+
+                    if (!maLop) {
+                        alert("Không tìm thấy sinh viên cần xóa.");
+                        return;
+                    }
+
+                    const confirmDelete = confirm(`Bạn có chắc muốn xóa sinh viên ${maLop} không?`);
+
+                    if (!confirmDelete) {
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch(`/Student/delete?masv=${encodeURIComponent(maLop)}`, {
+                            method: "DELETE"
+                        });
+
+                        const text = await response.text();
+
+                        if (response.ok) {
+                            alert("Xóa sinh viên thành công.");
+                            window.location.reload();
+                        } else {
+                            alert("Xóa thất bại.");
+                        }
+                    } catch (error) {
+                        alert("Có lỗi xảy ra khi xóa lớp: " + error.message);
+                    }
+                });
+            });
+
+            editButtons.forEach(button => {
+                button.addEventListener("click", async function () {
+                    const masv = this.getAttribute("data-masv");
+
+                    if (!masv) {
+                        alert("Không tìm thấy mã lớp cần xóa.");
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch(`/Student/Detail?masv=${encodeURIComponent(masv)}`, {
+                            method: "GET"
+                        });
+
+                        const result = await response.json();
+                        if (response.ok) {
+                            const student = result.data[0];
+                            console.log(student.id);
+                            document.getElementById("edit-malop").value = student.malop;
+                            document.getElementById("edit-masv").value = student.masv;
+                            document.getElementById("edit-ho").value = student.ho;
+                            document.getElementById("edit-ten").value = student.ten;
+                            document.getElementById("edit-phai").value =
+                                student.phai === "Nam" ? "true" : "false";
+                            document.getElementById("edit-danghoc").value = student.id;
+                            document.getElementById("edit-sodienthoai").value =
+                                student.sodienthoai?.trim() ?? "";
+                            document.getElementById("edit-ngaysinh").value = student.ngaysinh;
+                            document.getElementById("edit-email").value = student.email;
+                            document.getElementById("edit-diachi").value = student.diachi;
+                            
+                        } else {
+                            alert("edit lỗi.");
+                        }
+                    } catch (error) {
+                        alert("Có lỗi xảy ra khi xóa lớp: " + error.message);
+                    }
+                });
+            });
+        });
+    </script>
+}
