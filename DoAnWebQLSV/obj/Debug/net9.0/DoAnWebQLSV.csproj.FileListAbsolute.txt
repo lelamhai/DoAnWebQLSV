@@ -219,4 +219,4 @@ C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\DoAnWebQLSV.genruntimeconfig.cache
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\ref\DoAnWebQLSV.dll
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\3ntlhve8uf-ec25e3luig.gz
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cpp3i4sel1-1q0a2dcqys.gz
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\obj\Debug\net9.0\compressed\cpp3i4sel1-7c9m07j7kx.gz

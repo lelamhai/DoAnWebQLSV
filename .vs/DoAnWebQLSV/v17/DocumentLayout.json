@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\shared\\_nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\shared\\_nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\teacherinputscore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\teacherinputscore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\shared\\_giangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\shared\\_giangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\wwwroot\\assets\\css\\my-score.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\wwwroot\\assets\\css\\my-score.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\inputscore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\inputscore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 283,
+          "DockedWidth": 517,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -26,34 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_GiangVien.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_GiangVien.cshtml",
-              "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\Shared\\_GiangVien.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_GiangVien.cshtml",
-              "RelativeToolTip": "DoAnWebQLSV\\Views\\Shared\\_GiangVien.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAACLAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\TeacherInputScore\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\TeacherInputScore\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\TeacherInputScore\\Index.cshtml",
+              "RelativeToolTip": "DoAnWebQLSV\\Views\\TeacherInputScore\\Index.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJ8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-29T11:41:28.944Z",
+              "WhenOpened": "2026-06-29T14:37:42.061Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 764,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_NhanVien.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_NhanVien.cshtml",
-              "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\Shared\\_NhanVien.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_NhanVien.cshtml",
-              "RelativeToolTip": "DoAnWebQLSV\\Views\\Shared\\_NhanVien.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAABzAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "my-score.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\wwwroot\\assets\\css\\my-score.css",
+              "RelativeDocumentMoniker": "DoAnWebQLSV\\wwwroot\\assets\\css\\my-score.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\wwwroot\\assets\\css\\my-score.css",
+              "RelativeToolTip": "DoAnWebQLSV\\wwwroot\\assets\\css\\my-score.css",
+              "ViewState": "AgIAAL0BAAAAAAAAAAAAANEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-29T14:37:03.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\InputScore\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\InputScore\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\InputScore\\Index.cshtml",
+              "RelativeToolTip": "DoAnWebQLSV\\Views\\InputScore\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-29T11:41:21.159Z",
+              "WhenOpened": "2026-06-29T14:36:30.965Z",
               "EditorCaption": ""
             }
           ]

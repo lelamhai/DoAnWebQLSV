@@ -463,10 +463,6 @@
     .course-table td:nth-child(9)::before {
         content: "Xếp loại";
     }
-
-    .course-table td:nth-child(10)::before {
-        content: "Kết quả";
-    }
 }
 
 /* Mobile nằm (landscape) */
@@ -505,9 +501,5 @@
 
     .course-table td:nth-child(9)::before {
         content: "Xếp loại";
-    }
-
-    .course-table td:nth-child(10)::before {
-        content: "Kết quả";
     }
 }
