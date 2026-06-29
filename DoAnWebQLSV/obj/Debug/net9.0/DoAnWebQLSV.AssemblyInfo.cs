@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoAnWebQLSV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25662c6e505c0a9f9bebd2b2781a4abc99af1b26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f8eb2b4c10eddf861857a76d276b4f52679a5af")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoAnWebQLSV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoAnWebQLSV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

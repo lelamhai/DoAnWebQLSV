@@ -4,12 +4,6 @@
     var role = Context.Session.GetString("Role");
     switch(role)
     {
-        // case "Admin":
-        //     Layout = "_Admin";
-        //     break;
-        // case "NV":
-        //     Layout = "_NhanVien";
-        //     break;
         case "GV":
             Layout = "_GiangVien";
             break;
@@ -20,17 +14,4 @@
             Layout = "_NhanVien";
             break;
 	}
-   
-
-
-
-
-    // Layout = role switch
-    // {
-    //     "Admin" => "~/Views/Shared/_LayoutAdmin.cshtml",
-    //     "NV" => "~/Views/Shared/_LayoutNhanVien.cshtml",
-    //     "GV" => "~/Views/Shared/_LayoutGiangVien.cshtml",
-    //     "SV" => "~/Views/Shared/_LayoutSinhVien.cshtml",
-    //     _ => "~/Views/Shared/_Layout.cshtml"
-    // };
 }

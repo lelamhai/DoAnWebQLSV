@@ -16,8 +16,8 @@
 </head>
 <body>
     @{
-        var accountInfo = ViewBag.AccountInfo as StudentInfoData;
-        var maSV = accountInfo?.MaSV ?? "";
+        var accountInfo = ViewBag.AccountInfo as UserInfoData;
+        var maSV = accountInfo?.UserName ?? "";
         var hoTen = $"{accountInfo?.Ho} {accountInfo?.Ten}".Trim();
     }
 
@@ -32,31 +32,31 @@
             </div>
 
             <nav class="menu">
-                <a href="index.html" class="menu-item">
+                <a asp-controller="Home" asp-action="Index" class="menu-item active">
                     <span class="menu-icon"><i class="fa-solid fa-border-all"></i></span>
                     <span class="menu-text"><strong>Trang chủ</strong></span>
                 </a>
-                <a href="class-schedule.html" class="menu-item active">
+                <a asp-controller="Classroom" asp-action="Index" class="menu-item">
                     <span class="menu-icon"><i class="fa-regular fa-calendar-days"></i></span>
                     <span class="menu-text"><strong>Lớp học</strong></span>
                 </a>
-                <a href="register-course.html" class="menu-item">
+                <a asp-controller="Student" asp-action="Index" class="menu-item">
                     <span class="menu-icon"><i class="fa-regular fa-clipboard"></i></span>
                     <span class="menu-text"><strong>Sinh viên</strong></span>
                 </a>
-                <a href="my-course.html" class="menu-item">
+                <a asp-controller="Teacher" asp-action="Index" class="menu-item">
                     <span class="menu-icon"><i class="fa-regular fa-square-check"></i></span>
                     <span class="menu-text"><strong>Giảng viên</strong></span>
                 </a>
-                <a href="my-score.html" class="menu-item">
+                <a asp-controller="OpenCourse" asp-action="Index" class="menu-item">
                     <span class="menu-icon"><i class="fa-solid fa-trophy"></i></span>
-                    <span class="menu-text"><strong>Học phần</strong></span>
+                    <span class="menu-text"><strong>Mở lớp tín chỉ</strong></span>
                 </a>
-                <a href="paid-course.html" class="menu-item">
+                <a asp-controller="TuitionFees" asp-action="Index" class="menu-item">
                     <span class="menu-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
                     <span class="menu-text"><strong>Học phí</strong></span>
                 </a>
-                <a href="paid-course.html" class="menu-item">
+                <a asp-controller="InputScore" asp-action="Index" class="menu-item">
                     <span class="menu-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
                     <span class="menu-text"><strong>Điểm</strong></span>
                 </a>

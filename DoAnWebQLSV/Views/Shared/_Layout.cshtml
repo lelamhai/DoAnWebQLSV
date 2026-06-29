@@ -16,8 +16,8 @@
 </head>
 <body>
     @{
-        var accountInfo = ViewBag.AccountInfo as StudentInfoData;
-        var maSV = accountInfo?.MaSV ?? "";
+        var accountInfo = ViewBag.AccountInfo as UserInfoData;
+        var maSV = accountInfo?.UserName ?? "";
         var hoTen = $"{accountInfo?.Ho} {accountInfo?.Ten}".Trim();
     }
 

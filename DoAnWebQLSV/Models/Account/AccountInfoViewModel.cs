@@ -8,21 +8,21 @@ namespace DoAnWebQLSV.Models.Account
         public string Message { get; set; } = string.Empty;
 
         [JsonPropertyName("data")]
-        public StudentInfoData? Data { get; set; }
+        public UserInfoData? Data { get; set; }
     }
 
-    public class StudentInfoData
+    public class UserInfoData
     {
-        [JsonPropertyName("masv")]
-        public string MaSV { get; set; } = string.Empty;
-
-        [JsonPropertyName("avatar")]
-        public string Avatar { get; set; } = string.Empty;
+        [JsonPropertyName("username")]
+        public string UserName { get; set; } = string.Empty;
 
         [JsonPropertyName("ho")]
         public string Ho { get; set; } = string.Empty;
 
         [JsonPropertyName("ten")]
         public string Ten { get; set; } = string.Empty;
+
+        [JsonPropertyName("trangthai")]
+        public int TrangThai { get; set; }
     }
 }

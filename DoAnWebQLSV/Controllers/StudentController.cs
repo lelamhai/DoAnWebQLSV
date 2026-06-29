@@ -1,4 +1,5 @@
-﻿using DoAnWebQLSV.Models.Classroom;
+﻿using DoAnWebQLSV.Models.Account;
+using DoAnWebQLSV.Models.Classroom;
 using DoAnWebQLSV.Models.Student;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ namespace DoAnWebQLSV.Controllers
 {
     public class StudentController : Controller
     {
+        private const string API_GETACCOUNTINFO = "https://localhost:7141/api/v1/private/Account/info-account?username=";
         private const string API_GETSTUDENT = "https://localhost:7141/api/v1/private/Student/get-students";
         private const string API_GETCLASSROOMS = "https://localhost:7141/api/v1/private/Student/get-classrooms";
         private const string API_GETSTATUS = "https://localhost:7141/api/v1/private/Student/get-status-student";
@@ -34,9 +36,11 @@ namespace DoAnWebQLSV.Controllers
 
             try
             {
+                var accountInfo = await GetAccountInfoAsync(client, username);
                 var student = await GetStudentsAsync(client, page);
                 var classrooms = await GetClassroomsAsync(client);
                 var status = await GetStatusAsync(client);
+                ViewBag.AccountInfo = accountInfo?.Data;
                 ViewBag.Student = student;
                 ViewBag.Classrooms = classrooms?.Data ?? new List<ItemClassroom>();
                 ViewBag.Status = status?.Data ?? new List<StatusItem>();
@@ -47,6 +51,40 @@ namespace DoAnWebQLSV.Controllers
             }
 
             return View();
+        }
+
+        private async Task<AccountInfoViewModel?> GetAccountInfoAsync(HttpClient client, string? username)
+        {
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                return null;
+            }
+
+
+            var url = API_GETACCOUNTINFO + username;
+
+            var response = await client.GetAsync(url);
+            var responseText = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"API tài khoản lỗi {(int)response.StatusCode}: {responseText}");
+            }
+
+            if (string.IsNullOrWhiteSpace(responseText))
+            {
+                return null;
+            }
+
+            var result = JsonSerializer.Deserialize<AccountInfoViewModel>(
+                responseText,
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                }
+            );
+
+            return result;
         }
 
         private async Task<StudentData> GetStudentsAsync(HttpClient client, int page)
