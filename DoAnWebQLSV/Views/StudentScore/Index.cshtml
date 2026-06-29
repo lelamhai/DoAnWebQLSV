@@ -1,6 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    var points = ViewBag.Points;
+}
 @section Styles {
     <link rel="stylesheet" href="~/assets/css/my-score.css" />
 }
@@ -66,143 +66,50 @@
                         <th>Giữa kỳ</th>
                         <th>Cuối kỳ</th>
                         <th>Điểm tổng</th>
-                        <th>Xếp loại</th>
-                        <th>Kết quả</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 4 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Nhập môn lập trình</strong><small>INT1001 · 3 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Nhập môn lập trình</strong><small>INT1001 · 3 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 4 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 4 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Lập trình hướng đối tượng</strong><small>INT1003 · 3 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Lập trình hướng đối tượng</strong><small>INT1003 · 3 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cơ sở dữ liệu</strong><small>INT1004 · 4 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cơ sở dữ liệu</strong><small>INT1004 · 4 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cơ sở dữ liệu</strong><small>INT1004 · 4 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
-                    </tr>
+
+                    @if (points != null)
+                    {
+						int stt = 1;
+                        @foreach (var item in points.Items)
+                        {
+                            <tr>
+                                <td>@stt</td>
+                                <td><strong>@item.TenMH</strong><small>@item.MaMH · @item.SoTinChi TC</small></td>
+                                <td><span class="term">Học kỳ @item.HocKy</span></td>
+                                <td><span class="academic-year">@item.NienKhoa</span></td>
+                                <td>@item.DiemCC</td>
+                                <td>@item.DiemGK</td>
+                                <td>@item.DiemCK</td>
+                                <td class="no-right">@item.DiemTong</td>
+                            </tr>
+                        }
+						stt++;
+                    }
+
                 </tbody>
             </table>
         </div>
         <div class="pagination-wrapper">
             <nav class="pagination">
-                <button class="pagination-btn pagination-prev" title="Trang trước">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="pagination-page active">1</button>
-                <button class="pagination-btn pagination-next" title="Trang sau">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
+                @if (points != null)
+                {
+                    <a href="?page=1" class="pagination-btn pagination-prev" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></a>
+                    for (int i = 1; i <= points.Pagination.TotalPages; i++)
+                    {
+                        if (i == points.Pagination.Page)
+                        {
+                            <a href="?page=@i" class="pagination-page active">@i</a>
+                        }
+                        else
+                        {
+                            <a href="?page=@i" class="pagination-page">@i</a>
+                        }
+                    }
+                    <a href="?page=@points.Pagination.TotalPages" class="pagination-btn pagination-next" title="Trang sau"><i class="fa-solid fa-chevron-right"></i></a>
+                }
             </nav>
         </div>
     </div>
