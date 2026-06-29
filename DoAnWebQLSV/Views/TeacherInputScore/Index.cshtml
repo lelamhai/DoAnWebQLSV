@@ -5,38 +5,6 @@
     <link rel="stylesheet" href="~/assets/css/my-score.css" />
 }
 <section class="content-wrap">
-
-    <div class="score-info-summary">
-        <div class="score-info-card">
-            <div class="score-info-icon"><i class="fa-solid fa-book-open"></i></div>
-            <div class="score-info-content">
-                <span class="score-info-label">Số môn</span>
-                <strong>12/50</strong>
-            </div>
-        </div>
-        <div class="score-info-card">
-            <div class="score-info-icon"><i class="fa-solid fa-certificate"></i></div>
-            <div class="score-info-content">
-                <span class="score-info-label">Tín chỉ tích lũy</span>
-                <strong>90/152</strong>
-            </div>
-        </div>
-        <div class="score-info-card">
-            <div class="score-info-icon"><i class="fa-solid fa-star"></i></div>
-            <div class="score-info-content">
-                <span class="score-info-label">GPA</span>
-                <strong>8/10</strong>
-            </div>
-        </div>
-        <div class="score-info-card">
-            <div class="score-info-icon"><i class="fa-solid fa-trophy"></i></div>
-            <div class="score-info-content">
-                <span class="score-info-label">Xếp loại</span>
-                <strong>Giỏi</strong>
-            </div>
-        </div>
-    </div>
-
     <div class="page-title-row">
         <div class="page-title-group">
             <div class="title-icon"><i class="fa-regular fa-square-plus"></i></div>
@@ -44,10 +12,6 @@
                 <h1>Bảng điểm</h1>
             </div>
         </div>
-        <button type="button" class="export-pdf-btn" id="export-pdf-btn" aria-label="Xuất PDF">
-            <span class="export-pdf-icon"><i class="fa-solid fa-download"></i></span>
-            <span>Xuất PDF</span>
-        </button>
     </div>
 
     <div class="table-card">
@@ -56,33 +20,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Tìm kiếm theo tên môn" />
             </div>
-            <button class="filter-btn" id="filter-toggle" aria-expanded="false"><i class="fa-solid fa-filter"></i> Lọc</button>
         </div>
-
-        <div class="filter-panel" id="filter-panel" aria-hidden="true">
-            <div class="filter-fields">
-                <div class="filter-group">
-                    <label for="classroom">Học kỳ</label>
-                    <select id="classroom" class="filter-select">
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                        <option value="">Học kỳ 1</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="academic-year">Niên khóa</label>
-                    <input type="text" id="academic-year-picker" class="year-picker" placeholder="Chọn năm" data-date-format="yyyy" data-start-view="2" />
-                </div>
-            </div>
-        </div>
-
 
         <div class="table-responsive">
             <table class="course-table">
@@ -98,6 +36,7 @@
                         <th>Điểm tổng</th>
                         <th>Xếp loại</th>
                         <th>Kết quả</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -111,7 +50,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -123,7 +63,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -135,7 +76,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -147,7 +89,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -159,7 +102,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -171,7 +115,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -183,7 +128,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -195,7 +141,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -207,7 +154,8 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -219,42 +167,25 @@
                         <td>8.0</td>
                         <td>8.0</td>
                         <td>Giỏi</td>
-                        <td class="no-right">Đạt</td>
+                        <td>Đạt</td>
+                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
-        <div class="score-summary">
-            <h3 class="summary-title">Tổng hợp</h3>
-            <div class="summary-grid">
-                <div class="summary-item">
-                    <div class="summary-label">Học kỳ</div>
-                    <div class="summary-value">Học kỳ 1</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Niên khóa</div>
-                    <div class="summary-value">2025-2026</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Tổng số môn</div>
-                    <div class="summary-value">11</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Tổng tín chỉ</div>
-                    <div class="summary-value">38</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Điểm trung bình</div>
-                    <div class="summary-value">7.95</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Xếp loại</div>
-                    <div class="summary-value summary-rank-good">Giỏi</div>
-                </div>
-            </div>
+        <div class="pagination-wrapper">
+            <nav class="pagination">
+                <button class="pagination-btn pagination-prev" title="Trang trước">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="pagination-page active">1</button>
+                <button class="pagination-btn pagination-next" title="Trang sau">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </nav>
         </div>
     </div>
+    
 </section>
 
 @section Scripts {

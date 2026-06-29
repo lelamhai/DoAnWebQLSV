@@ -89,12 +89,12 @@ wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\class-schedule.css
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\classroom.css
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\my-score.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\column.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\content.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\dashboard.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\my-course.css
-C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\my-score.css
+C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\classroom.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\open-course.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\paid-course.css
 C:\Users\ADMIN\Documents\PTIT\HK6\HDV\Projects\DoAnWebQLSV\DoAnWebQLSV\wwwroot\assets\css\register-course.css
