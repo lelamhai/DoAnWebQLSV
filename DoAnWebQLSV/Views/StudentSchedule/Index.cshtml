@@ -1,5 +1,34 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/class-schedule.css" />
+}
+
+<section class="content-wrap schedule-page">
+    <div class="page-title-row schedule-page-title-row">
+        <div class="page-title-group">
+            <div class="title-icon"><i class="fa-regular fa-calendar-days"></i></div>
+            <div>
+                <h1>Thời khóa biểu</h1>
+            </div>
+        </div>
+
+        <div class="view-toggle" id="view-toggle" role="tablist" aria-label="Đổi chế độ xem">
+            <button type="button" class="view-btn is-active" data-view="timeGridWeek">Tuần</button>
+            <button type="button" class="view-btn" data-view="dayGridMonth">Tháng</button>
+        </div>
+    </div>
+
+    <div class="schedule-card">
+        <!-- Coding start-->
+        <div id="calendar" class="schedule-calendar" aria-label="Lịch học"></div>
+        <!-- Coding end-->
+    </div>
+</section>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="~/assets/js/my-course.js"></script>
+    <script src="~/assets/js/class-schedule.js"></script>
 }

@@ -47,6 +47,10 @@
                     <span class="menu-icon"><i class="fa-regular fa-square-check"></i></span>
                     <span class="menu-text"><strong>Xem học phí</strong></span>
                 </a>
+                <a asp-controller="StudentScore" asp-action="Index" class="menu-item @(currentController == "StudentScore" ? "active" : "")">
+                    <span class="menu-icon"><i class="fa-regular fa-square-check"></i></span>
+                    <span class="menu-text"><strong>Xem điểm</strong></span>
+                </a>
                 <a asp-controller="StudentCourseRegistration" asp-action="Index" class="menu-item @(currentController == "StudentCourseRegistration" ? "active" : "")">
                     <span class="menu-icon"><i class="fa-regular fa-clipboard"></i></span>
                     <span class="menu-text"><strong>Đăng ký học phần</strong></span>

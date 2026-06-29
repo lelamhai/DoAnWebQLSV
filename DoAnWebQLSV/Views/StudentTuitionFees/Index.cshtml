@@ -1,5 +1,128 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
+@section Styles {
+    <link rel="stylesheet" href="~/assets/css/paid-course.css" />
+}
+
+<section class="content-wrap">
+    <!-- Paid summary cards: Tổng tiền / Tổng thu / Tổng dư -->
+    <div class="paid-summary">
+        <div class="paid-card">
+            <div class="paid-icon"><i class="fa-solid fa-wallet"></i></div>
+            <div class="paid-content">
+                <div class="paid-label">Tổng tiền học phí</div>
+                <div id="paid-total" class="paid-value">50.000.000</div>
+            </div>
+        </div>
+        <div class="paid-card">
+            <div class="paid-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="paid-content">
+                <div class="paid-label">Tổng tiền đã thu</div>
+                <div id="paid-collected" class="paid-value">50.000.000</div>
+            </div>
+        </div>
+        <div class="paid-card">
+            <div class="paid-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div class="paid-content">
+                <div class="paid-label">Tổng số tiền dư</div>
+                <div id="paid-remaining" class="paid-value">0</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-title-row">
+        <div class="page-title-group">
+            <div class="title-icon"><i class="fa-regular fa-square-plus"></i></div>
+            <div>
+                <h1>Học phí</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-card">
+        <div class="table-responsive">
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Học kỳ</th>
+                        <th>Niên Khóa</th>
+                        <th>Học phí</th>
+                        <th>Đã thu</th>
+                        <th>Tiền Dư</th>
+                        <th>QR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                    <tr>
+                        <td class="code">1</td>
+                        <td><span class="term">Học Kỳ 1</span></td>
+                        <td><span class="academic-year">2025-2026</span></td>
+                        <td>10.000.000</td>
+                        <td>11.000.000</td>
+                        <td>1.000.000</td>
+                        <td class="no-right"><button type="button" class="qr-btn" data-img="../assets/imgs/QR.png">Xem QR</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+@section Scripts {
+    <script src="~/assets/js/paid-course.js"></script>
 }

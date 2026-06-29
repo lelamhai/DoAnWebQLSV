@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\shared\\_sinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\shared\\_sinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\views\\studenthome\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\views\\studenthome\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\controllers\\studentschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\controllers\\studentschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|c:\\users\\admin\\documents\\ptit\\hk6\\hdv\\projects\\doanwebqlsv\\doanwebqlsv\\wwwroot\\assets\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C1711E34-0565-4A06-BEC6-0628AF621CE1}|DoAnWebQLSV\\DoAnWebQLSV.csproj|solutionrelative:doanwebqlsv\\wwwroot\\assets\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +17,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 317,
+          "DockedWidth": 523,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -27,27 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StudentScheduleController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Controllers\\StudentScheduleController.cs",
-              "RelativeDocumentMoniker": "DoAnWebQLSV\\Controllers\\StudentScheduleController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Controllers\\StudentScheduleController.cs",
-              "RelativeToolTip": "DoAnWebQLSV\\Controllers\\StudentScheduleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T04:43:25.834Z",
+              "Title": "dashboard.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\wwwroot\\assets\\css\\dashboard.css",
+              "RelativeDocumentMoniker": "DoAnWebQLSV\\wwwroot\\assets\\css\\dashboard.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\wwwroot\\assets\\css\\dashboard.css",
+              "RelativeToolTip": "DoAnWebQLSV\\wwwroot\\assets\\css\\dashboard.css",
+              "ViewState": "AgIAACsAAAAAAAAAAADwv0QAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-29T10:26:36.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_SinhVien.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_SinhVien.cshtml",
-              "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\Shared\\_SinhVien.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\Shared\\_SinhVien.cshtml",
-              "RelativeToolTip": "DoAnWebQLSV\\Views\\Shared\\_SinhVien.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAB+AAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\StudentHome\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoAnWebQLSV\\Views\\StudentHome\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\PTIT\\HK6\\HDV\\Projects\\DoAnWebQLSV\\DoAnWebQLSV\\Views\\StudentHome\\Index.cshtml",
+              "RelativeToolTip": "DoAnWebQLSV\\Views\\StudentHome\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-29T04:32:07.493Z",
+              "WhenOpened": "2026-06-29T10:20:52.786Z",
               "EditorCaption": ""
             }
           ]
