@@ -1,6 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    var subjects = ViewBag.SubjectData;
+}
 @section Styles {
     <link rel="stylesheet" href="~/assets/css/my-course.css" />
 }
@@ -70,44 +70,46 @@
                         <th>Môn học</th>
                         <th>Giảng viên</th>
                         <th>Lịch học</th>
-                        <th>Ngày đăng ký</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="code">1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 34 TC</small></td>
-                        <td>Bùi Xuân Phúc</td>
-                        <td><strong>Thứ: 2, 4, 5</strong><small>01/03/2026 - 30/05/2026</small></td>
-                        <td>15/02/2026</td>
-                        <td><button class="register-btn cancel-btn"><i class="fa-solid fa-trash"></i> Hủy</button></td>
-                    </tr>
-                    <tr>
-                        <td class="code">2</td>
-                        <td><strong>Nhập môn lập trình</strong><small>INT1001 · 3 TC</small></td>
-                        <td>Huỳnh Thanh Nam</td>
-                        <td><strong>Thứ: 3, 5</strong><small>05/03/2026 - 02/06/2026</small></td>
-                        <td>15/02/2026</td>
-                        <td><button class="register-btn cancel-btn"><i class="fa-solid fa-trash"></i> Hủy</button></td>
-                    </tr>
-                    <tr>
-                        <td class="code">3</td>
-                        <td><strong>Lập trình hướng đối tượng</strong><small>INT1003 · 3 TC</small></td>
-                        <td>Bùi Xuân Quang</td>
-                        <td><strong>Thứ: 2, 4</strong><small>18/09/2024 - 15/12/2024</small></td>
-                        <td>15/02/2026</td>
-                        <td><button class="register-btn cancel-btn"><i class="fa-solid fa-trash"></i> Hủy</button></td>
-                    </tr>
-                    <tr>
-                        <td class="code">4</td>
-                        <td><strong>Cơ sở dữ liệu</strong><small>INT1004 · 3 TC</small></td>
-                        <td>Lê Văn Khang</td>
-                        <td><strong>Thứ: 2, 4, 5</strong><small>20/05/2025 - 20/08/2025</small></td>
-                        <td>15/02/2026</td>
-                        <td><button class="register-btn cancel-btn"><i class="fa-solid fa-trash"></i> Hủy</button></td>
-                    </tr>
-                    
+                    @if (subjects != null)
+                    {
+                        @foreach (var item in subjects.Items)
+                        {
+                            <tr>
+                                <td class="code">
+                                    @item.MaLtc
+                                </td>
+
+                                <td>
+                                    <strong>@item.TenMh</strong>
+                                    <small>@item.MaMh · @item.SoTinChi TC</small>
+                                </td>
+
+                                <td>
+                                    @(string.IsNullOrWhiteSpace(item.TenGiangVien)
+                                                                ? "Chưa phân công"
+                                                                : item.TenGiangVien)
+                        </td>
+
+                                <td>
+                                    <strong>@item.LichHoc</strong>
+                                    <small>@item.ThoiGianHoc</small>
+                                </td>
+
+                                <td>
+                                    <button type="button"
+                                            class="register-btn cancel-btn"
+                                            data-maltc="@item.MaLtc"
+                                            onclick="huyDangKy(@item.MaLtc)">
+                                        Hủy
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>

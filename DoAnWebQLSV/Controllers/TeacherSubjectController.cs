@@ -1,4 +1,5 @@
 ﻿using DoAnWebQLSV.Models.Account;
+using DoAnWebQLSV.Models.Student;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -8,6 +9,7 @@ namespace DoAnWebQLSV.Controllers
     public class TeacherSubjectController : Controller
     {
         private const string API_GETACCOUNTINFO = "https://localhost:7141/api/v1/private/Account/info-account?username=";
+        private const string API_GETTEACHERSUBJECT = "https://localhost:7141/api/TeacherCourse/get-teacher-subject";
         public async Task<IActionResult> IndexAsync()
         {
             var accessToken = HttpContext.Session.GetString("AccessToken");
@@ -25,7 +27,9 @@ namespace DoAnWebQLSV.Controllers
             try
             {
                 var accountInfo = await GetAccountInfoAsync(client, username);
+                var subjects = await GetSubjectAsync(client, username, 1);
                 ViewBag.AccountInfo = accountInfo?.Data;
+                ViewBag.Subjects = subjects;
             }
             catch (Exception ex)
             {
@@ -69,5 +73,35 @@ namespace DoAnWebQLSV.Controllers
 
             return result;
         }
+
+        private async Task<LTCData> GetSubjectAsync(HttpClient client, string username, int page)
+        {
+            try
+            {
+                var url = API_GETTEACHERSUBJECT + $"?maGv={username}&page={page}";
+                var response = await client.GetAsync(url);
+                var responseText = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception($"API lớp lỗi {(int)response.StatusCode}: {responseText}");
+                }
+
+                var result = JsonSerializer.Deserialize<ListLTCModel>(
+                    responseText,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }
+                );
+
+                return result?.Data ?? new LTCData();
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Lỗi khi gọi API sinh viên: {e.Message}");
+            }
+        }
+
     }
 }

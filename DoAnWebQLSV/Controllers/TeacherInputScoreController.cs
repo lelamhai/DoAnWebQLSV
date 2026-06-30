@@ -1,4 +1,6 @@
 ﻿using DoAnWebQLSV.Models.Account;
+using DoAnWebQLSV.Models.Student;
+using DoAnWebQLSV.Models.Teacher;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -8,7 +10,8 @@ namespace DoAnWebQLSV.Controllers
     public class TeacherInputScoreController : Controller
     {
         private const string API_GETACCOUNTINFO = "https://localhost:7141/api/v1/private/Account/info-account?username=";
-        public async Task<IActionResult> IndexAsync()
+        private const string API_GETSCORE = "https://localhost:7141/api/TeacherInputScore/get-teacher-inputscore";
+        public async Task<IActionResult> Index(int page)
         {
             var accessToken = HttpContext.Session.GetString("AccessToken");
             var username = HttpContext.Session.GetString("Username");
@@ -25,7 +28,10 @@ namespace DoAnWebQLSV.Controllers
             try
             {
                 var accountInfo = await GetAccountInfoAsync(client, username);
+                var scores = await GetSubjectsAsync(client, username, page);
+
                 ViewBag.AccountInfo = accountInfo?.Data;
+                ViewBag.Scores = scores;
             }
             catch (Exception ex)
             {
@@ -69,5 +75,35 @@ namespace DoAnWebQLSV.Controllers
 
             return result;
         }
+
+        private async Task<PointTeacherData> GetSubjectsAsync(HttpClient client, string username, int page)
+        {
+            try
+            {
+                var url = API_GETSCORE + $"?maGv={username}&page={page}";
+                var response = await client.GetAsync(url);
+                var responseText = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception($"API lớp lỗi {(int)response.StatusCode}: {responseText}");
+                }
+
+                var result = JsonSerializer.Deserialize<ListPointTeacher>(
+                    responseText,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }
+                );
+
+                return result?.Data ?? new PointTeacherData();
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Lỗi khi gọi API sinh viên: {e.Message}");
+            }
+        }
+
     }
 }

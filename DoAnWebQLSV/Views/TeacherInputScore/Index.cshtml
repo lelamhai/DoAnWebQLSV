@@ -1,6 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    var scores = ViewBag.Scores;
+}
 @section Styles {
     <link rel="stylesheet" href="~/assets/css/my-score.css" />
 }
@@ -39,30 +39,61 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 3 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><strong>Nhập môn lập trình</strong><small>INT1001 · 3 TC</small></td>
-                        <td><span class="term">Học kỳ 1</span></td>
-                        <td><span class="academic-year">2025-2026</span></td>
-                        <td>8.0</td>
-                        <td>7.5</td>
-                        <td>8.0</td>
-                        <td>8.0</td>
-                        <td>Giỏi</td>
-                        <td><button type="button" class="action-btn edit-btn" data-malop="" title="Sửa" aria-label="Sửa lớp học"><i class="fa-solid fa-pen"></i></button></td>
-                    </tr>
+                    @if (scores?.Items != null)
+                    {
+                        int stt = 1;
+
+                        foreach (var item in scores.Items)
+                        {
+                            <tr>
+                                <td>@stt</td>
+
+                                <td>
+                                    <strong>@item.TenMh</strong>
+                                    <small>@item.MaMh · @item.SoTinChi TC</small>
+                                </td>
+
+                                <td>
+                                    <span class="term">
+                                        Học kỳ @item.HocKy
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="academic-year">
+                                        @item.NienKhoa
+                                    </span>
+                                </td>
+
+                                <td>@item.DiemCc.ToString("0.0")</td>
+                                <td>@item.DiemGk.ToString("0.0")</td>
+                                <td>@item.DiemCk.ToString("0.0")</td>
+                                <td>@item.DiemTong.ToString("0.0")</td>
+
+                                <td>
+                                    @(string.IsNullOrWhiteSpace(item.XepLoai)
+                                                                ? "Chưa xếp loại"
+                                                                : item.XepLoai)
+                        </td>
+
+                                                    <td>
+                                                        <button type="button"
+                                                                class="action-btn edit-btn"
+                                                                data-maltc="@item.MaLtc"
+                                                                data-masv="@item.MaSv"
+                                                                data-diemcc="@item.DiemCc"
+                                                                data-diemgk="@item.DiemGk"
+                                                                data-diemck="@item.DiemCk"
+                                                                title="Sửa điểm"
+                                                                aria-label="Sửa điểm">
+                                                            <i class="fa-solid fa-pen"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                stt++;
+                        }
+                    }
                 </tbody>
             </table>
         </div>

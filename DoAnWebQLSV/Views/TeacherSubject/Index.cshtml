@@ -1,6 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    var subjects = ViewBag.Subjects;
+}
 <section class="content-wrap">
     <div class="page-title-row">
         <div class="page-title-group">
@@ -32,23 +32,43 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="code">1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 3 TC</small></td>
-                        <td>Nguyễn Văn Hoàng</td>
-                        <td><span class="term">Học Kỳ 1</span></td>
-                        <td>50</td>
-                        <td class="no-right"><strong>Thứ: 2, 4, 5</strong><small>01/03/2026 - 30/05/2026</small></td>
-                    </tr>
-                
-                    <tr>
-                        <td class="code">3</td>
-                        <td><strong>Nhập môn lập trình</strong><small>INT1001 · 3 TC</small></td>
-                        <td>Nguyễn Văn Hoàng</td>
-                        <td><span class="term">Học Kỳ 1</span></td>
-                        <td>29</td>
-                        <td class="no-right"><strong>Thứ: 2, 4</strong><small>03/03/2026 - 28/05/2026</small></td>
-                    </tr>
+                    @if (subjects != null)
+                    {
+                        @foreach (var item in subjects.Items)
+                        {
+                            <tr>
+                                <td class="code">
+                                    @item.MaLtc
+                                </td>
+
+                                <td>
+                                    <strong>@item.TenMh</strong>
+                                    <small>@item.MaMh · @item.SoTinChi TC</small>
+                                </td>
+
+                                <td>
+                                    @(string.IsNullOrWhiteSpace(item.TenGiangVien)
+                                                                ? "Chưa phân công"
+                                                                : item.TenGiangVien)
+                        </td>
+
+                                <td>
+                                    <span class="term">
+                                        Học Kỳ @item.HocKy
+                                    </span>
+                                </td>
+
+                                <td>
+                                    @item.SiSoHienTai
+                                </td>
+
+                                <td class="no-right">
+                                    <strong>@item.LichHoc</strong>
+                                    <small>@item.ThoiGianHoc</small>
+                                </td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>

@@ -1,6 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    var ltcs = ViewBag.LTCData;
+}
 @section Styles {
     <link rel="stylesheet" href="~/assets/css/register-course.css" />
 }
@@ -38,44 +38,73 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="code">1</td>
-                        <td><strong>Cấu trúc dữ liệu và giải thuật</strong><small>INT1002 · 4 TC</small></td>
-                        <td>Bùi Xuân Phúc</td>
-                        <td><span class="term">Học Kỳ 1</span></td>
-                        <td>0/50</td>
-                        <td><strong>Thứ: 2, 4, 5</strong><small>01/03/2026 - 30/05/2026</small></td>
-                        <td><button class="register-btn">Đăng ký</button></td>
-                    </tr>
-                    <tr>
-                        <td class="code">2</td>
-                        <td><strong>Nhập môn lập trình</strong><small>INT1001 · 3 TC</small></td>
-                        <td>Huỳnh Thanh Nam</td>
-                        <td><span class="term">Học Kỳ 1</span></td>
-                        <td>25/50</td>
-                        <td><strong>Thứ: 3, 5</strong><small>05/03/2026 - 02/06/2026</small></td>
-                        <td><button class="register-btn">Đăng ký</button></td>
-                    </tr>
-                   
-                    <tr>
-                        <td class="code">3</td>
-                        <td><strong>Lập trình hướng đối tượng</strong><small>INT1003 · 3 TC</small></td>
-                        <td>Bùi Xuân Quang</td>
-                        <td><span class="term">Học Kỳ 1</span></td>
-                        <td>35/50</td>
-                        <td><strong>Thứ: 2, 4</strong><small>18/09/2024 - 15/12/2024</small></td>
-                        <td><button class="register-btn">Đăng ký</button></td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="code">4</td>
-                        <td><strong>Cơ sở dữ liệu</strong><small>INT1004 · 4 TC</small></td>
-                        <td>Lê Văn Khang</td>
-                        <td><span class="term">Học Kỳ 1</span></td>
-                        <td>16/50</td>
-                        <td><strong>Thứ: 2, 4, 5</strong><small>20/05/2025 - 20/08/2025</small></td>
-                        <td><button class="register-btn">Đăng ký</button></td>
-                    </tr>
+
+                    @if (ltcs != null)
+                    {
+                        @foreach (var item in ltcs.Items)
+                        {
+                            bool lopDaDay = item.SiSoHienTai >= item.SiSoToiDa;
+
+                            <tr>
+                                <td class="code">
+                                    @item.MaLtc
+                                </td>
+
+                                <td>
+                                    <strong>@item.TenMh</strong>
+                                    <small>@item.MaMh · @item.SoTinChi TC</small>
+                                </td>
+
+                                <td>
+                                    @(string.IsNullOrEmpty(item.TenGiangVien)
+                                                                ? "Chưa phân công"
+                                                                : item.TenGiangVien)
+                        </td>
+
+                                <td>
+                                    <span class="term">
+                                        Học Kỳ @item.HocKy
+                                    </span>
+                                </td>
+
+                                <td>
+                                    @item.SiSo
+                                </td>
+
+                                <td>
+                                    <strong>@item.DayThuTrongTuan</strong>
+                                    <small>@item.ThoiGianHoc</small>
+                                </td>
+
+                                <td>
+                            @if (item.HuyLop)
+                                    {
+                                        <button type="button"
+                                                class="register-btn"
+                                                disabled>
+                                            Đã hủy
+                                        </button>
+                                    }
+                                    else if (lopDaDay)
+                                    {
+                                        <button type="button"
+                                                class="register-btn"
+                                                disabled>
+                                            Đã đầy
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button type="button"
+                                                class="register-btn"
+                                                data-maltc="@item.MaLtc">
+                                            Đăng ký
+                                        </button>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>
